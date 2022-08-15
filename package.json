@@ -3,12 +3,13 @@
   "main": "app/index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon --es-module-specifier-resolution=node -I --watch app",
-    "test": "jest"
+    "test": "cucumber-js -f @cucumber/pretty-formatter"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
+    "@cucumber/cucumber": "^8.5.1",
+    "@cucumber/pretty-formatter": "^1.0.0",
     "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-xo": "^0.41.0",
@@ -17,5 +18,8 @@
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "expect": "^28.1.3"
   }
 }
