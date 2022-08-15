@@ -9,10 +9,24 @@ Given("I have a temperature of {float}° {units}", function (temp2Convert, _) {
   this.temp2Convert = temp2Convert;
 });
 
+Given("I have non-numerical input", () => {});
+
 When("I convert it to degrees {units}", function (units) {
   this.convertedTemp = tryConvert(this.temp2Convert, units);
 });
 
 Then("I see {float}° {units}", function (expected, _) {
-  expect(this.convertedTemp).toBe(expected.toString());
+  const expectHelper = () => {
+    expect(this.convertedTemp).toBe(expected.toString());
+  };
+
+  expectHelper();
+});
+
+Then("I see a blank string", function () {
+  const expectHelper = () => {
+    expect(this.convertedTemp).toBe("");
+  };
+
+  expectHelper();
 });
