@@ -1,7 +1,7 @@
 import tryConvert from "./index.js";
 
 it("converts 100 celsius to 212 fahrenheit", () => {
-  // Arrange
+  // Arrange - set up your inputs and expected output
   const temp2Convert = 100;
   const conversion = "toFahrenheit";
 
